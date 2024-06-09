@@ -1,0 +1,25 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "backgroundEvents.js", "pageAction.js" ]
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "menu.css" ],
+      "js": [ "jquery-3.2.0.min.js", "content_script.js", "search.js", "notesSummary.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "description": "Use this extension to annotate (edit, highlight, popup/embedded notes & page notes) your web-pages.",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmHEaLCjmCfGL+teLulPqpFMaCc8KqugA5RVgGs7g7T8Ajd/GSj1hbTqWT/Nv/QVZHbhJ99egiw5aK0kbaQQjCgT2SCDg8bNI/uzEAKd/p4bDqQpk6g2/S6oY2WSsWQU1cu4oFlUPOWkAvpO443udJfiYPHudFBjk45Pbbquq8gIi+Cq9XM2EjqVQrY26udRc32qULGBUXM99tgInfhLzGte+ab2cSXUhAsyb1Q6SdvHaF4oZu74+uVhkSh0gLaEvLIYtSgZuagrNl5jpHzpCpDWOqr9ZfuBNp0rgDiX/R8eA0RRZ6GUJapK/cAWuOQp9Y2S7DsthhI3qLNFvC/BtSwIDAQAB",
+   "manifest_version": 2,
+   "name": "Annotator",
+   "page_action": {
+      "default_icon": "icons/LogoGray32x32.png",
+      "default_name": "CONTEXT",
+      "default_popup": "pageActionPopup.html"
+   },
+   "permissions": [ "tabs", "declarativeContent", "activeTab", "storage", "unlimitedStorage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.6",
+   "web_accessible_resources": [ "edit.png", "ring.png", "DomainEdit.png", "pageActionPopup.html", "PageEdit.png", "DomainNoEdit.png", "PageNoEdit.png", "Eraser.png", "search.html", "search.png", "searchIcon.png", "searchIcon2.png", "summary.png", "Cross.png", "notes.png", "delete.png", "EmbeddedNotes.png" ]
+}

@@ -1,0 +1,62 @@
+<html>
+<head><title>Search</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="jquery-3.2.0.min.js"></script> 
+<script src="notesSummary.js"></script>
+<script src="search.js"></script>
+<style>
+
+.searchResult table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.searchResult th, .searchResult td {
+    text-align: left;
+    padding: 8px;
+}
+
+.searchResult tr:nth-child(even){background-color: #E1ECF8}
+
+.searchResult th {
+    background-color: #1199ee;
+    color: white;
+}
+
+</style>
+</head>
+<body>
+<div id = 'AnnotatorblueHeader'>
+ <table style="width:100%">
+   <tr>
+     <td width = 10%></td>
+     <td width = 80%><div style = "background-color: #0088ee; height:100px;">&nbsp;</div></td>
+     <td width = 10%></td>
+   </tr>
+ </table>
+</div>
+<div>
+ <table style="width:100%">
+   <tr>
+     <td width = 10%></td>
+     <td width = 80%>
+       <div>
+         <table align="center">
+         <tr><td>
+            <input type="text" id="AnnotatorSearchWords" size=80 placeholder="Search string or RegEx (Leave empty to fetch everything)"> 
+            <img class = "AnnotatorExtensionMenuButtons" id="AnnotatorExtensionSearchBtn" src="searchIcon2.png" width = 30px alt="E" title="Edit"  />
+         </td></tr>
+         <tr><td align = "center">
+            <input type="radio" name = "AnnotatorSearchScope" id="AnnotatorSearchScope1" value="HighNote" checked="checked">Search highlights and notes only &nbsp;&nbsp;&nbsp;
+            <input type="radio" name = "AnnotatorSearchScope" id="AnnotatorSearchScope2" value="AllStuff">Search everything/entire page contents (might be slow)
+         </td></tr>
+         </table>
+       </div></td>
+     <td width = 10%></td>
+   </tr>
+ </table>
+</div>
+<br>
+<div id = 'SearchRes'></div>
+<body>
+</html>
